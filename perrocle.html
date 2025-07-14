@@ -248,10 +248,14 @@
 </head>
 
 <body>
-
   <nav id="navbar">
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html" >Accueil</a></li>
       <li><a href="perrocle.html" class="active">Le Perroclé</a></li>
       <li><a href="galerie.html">Galerie</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -370,6 +374,12 @@
     <p>&copy; 2025 Phil de fer. Tous droits réservés.</p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
 </body>
 
 </html>

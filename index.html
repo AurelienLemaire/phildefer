@@ -195,7 +195,12 @@
 <body>
 
   <nav id="navbar">
-    <ul>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="nav-links">
       <li><a href="index.html" class="active">Accueil</a></li>
       <li><a href="perrocle.html">Le Perroclé</a></li>
       <li><a href="galerie.html">Galerie</a></li>
@@ -302,6 +307,12 @@
 
     window.addEventListener('resize', updateCarousel);
     window.addEventListener('load', updateCarousel);
+  </script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
   </script>
 
 

@@ -25,7 +25,6 @@
 }
 
 /* navbar */
-
 nav#navbar {
     position: fixed;
     top: 0;
@@ -33,14 +32,13 @@ nav#navbar {
     background: transparent;
     transition: background 0.3s ease;
     z-index: 1000;
-}
-
-nav#navbar.scrolled {
+  }
+  nav#navbar.scrolled {
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-nav#navbar ul {
+  nav#navbar ul {
     list-style: none;
     margin: 0;
     padding: 1rem 2rem;
@@ -49,26 +47,80 @@ nav#navbar ul {
     justify-content: flex-end;
     max-width: 1200px;
     margin: 0px auto;
-    font-size: 1.4em;
-}
+    font-size: 1.4em;  }
 
-nav#navbar a {
+  nav#navbar a {
     text-decoration: none;
     color: white;
     font-weight: bold;
     transition: color 0.3s;
     padding-bottom: 5px;
-}
+  }
 
-nav#navbar.scrolled a {
+
+  nav#navbar.scrolled a {
     color: #222;
 }
 
-nav#navbar a.active {
-    border-bottom: 3px solid var(--yellow);
+  nav#navbar a.active {
+    border-bottom: 2px solid var(--yellow);
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1rem;
+    margin-right:15px;
+  }
+
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+  }
+
+  nav#navbar.scrolled .burger div {
+    background-color: #222;
 }
 
 
+  @media (max-width: 540px) {
+    nav#navbar ul {
+      display: none;
+      flex-direction: column;
+      background: white;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 300px;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    nav#navbar ul.show {
+      display: flex;
+    }
+
+    nav#navbar a {
+        color: #222;
+
+      }
+
+    .burger {
+      display: flex;
+      margin-left: auto;
+    }
+
+    nav#navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+
+    }
+  }
 /* body */
 body {
     font-family: 'Quicksand', sans-serif;
