@@ -1,191 +1,235 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phil de fer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Importation des polices Google Fonts */
-        /* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap'); */ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phil de fer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Importation des polices Google Fonts */
+    /* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap'); */
 
 
-        /* Styles de base */
-        
-        .hero {
-	   		background-image: url('photos/Mouet 20250414_150417.jpg');
-		    background-size: cover;
-		    background-position: center;
-		}
-        
-        /* --- Section Éco-Responsable --- */
-        .eco-responsible {
-            background-color: #247962; /* Vert émeraude */
-            color: var(--color-text-light);
-            line-height: 1.6;
-        }
+    /* Styles de base */
 
-        .eco-responsible h2 {
-            color: var(--color-text-light);
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-            margin-bottom:50px;
-        }
+    .hero {
+      background-image: url('photos/Mouet 20250414_150417.jpg');
+      background-size: cover;
+      background-position: center;
+    }
 
-        .eco-responsible p {
-        	margin-bottom:15px;
-        }
+    /* --- Section Éco-Responsable --- */
+    .eco-responsible {
+      background-color: #247962;
+      /* Vert émeraude */
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
 
-        .eco-responsible * {
-            max-width: 800px;
-            margin: 0px auto;
-        }
+    .eco-responsible h2 {
+      color: var(--color-text-light);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      margin-bottom: 50px;
+    }
 
-        .eco-responsible strong {
-            color: var(--color-accent-yellow);
-        }
+    .eco-responsible p {
+      margin-bottom: 15px;
+    }
 
-        /* --- Section L'Artisan --- */
+    .eco-responsible * {
+      max-width: 800px;
+      margin: 0px auto;
+    }
 
+    .eco-responsible strong {
+      color: var(--color-accent-yellow);
+    }
 
-		.artisan{
-			text-align:center;
-			max-width: 1200px;
-		}
-		
-		        .artisan * {
-		            max-width: 800px;
-            margin: 0px auto;
-            }
-
-        .artisan p {
-        	margin-bottom:15px;
-
-        }
+    /* --- Section L'Artisan --- */
 
 
+    .artisan {
+      text-align: center;
+      max-width: 1200px;
+    }
 
-        .creations {
-			background:
-			  linear-gradient(217deg, rgb(255 0 0 / 0.8), rgb(255 0 0 / 0) 70.71%),
-			  linear-gradient(127deg, rgb(0 128 0 / 1), rgb(0 128 0 / 0) 70.71%),
-			  linear-gradient(336deg, rgb(255 165 0 / 1), rgb(255 165 0 / 0) 70.71%);
-		  	background-position: right bottom;
-        }
+    .artisan * {
+      max-width: 800px;
+      margin: 0px auto;
+    }
 
-        .creations h2{
-            max-width: 800px;
-          	margin: 0px auto;
-            margin-bottom: 50px;
-            color:var(--color-background-light);
-        }
-        
-        
-        
-        /* carroussel */
-		    
-		.carousel {
-		  position: relative;
-		  overflow: hidden;
-		  height: 900px;
-		  border-radius: 20px;
-		  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-		}
+    .artisan p {
+      margin-bottom: 15px;
 
-		.carousel-track {
-		  display: flex;
-		  transition: transform 0.5s ease;
-		  height: 100%;
-		}
-
-		.carousel img {
-		  width: 100%;
-		  height: 100%;
-		  object-fit: cover;
-		  flex-shrink: 0;
-		}
-
-		.carousel-buttons {
-		  text-align: center;
-		  margin-top: 1rem;
-		}
-
-		.carousel-buttons button {
-		  background: transparent;
-		  color: var(--color-background-dark);
-		  border: none;
-		  padding: 0.5rem 1rem;
-		  margin: 0 0.5rem;
-		  border-radius: 5px;
-		  cursor: pointer;
-		}
-        
+    }
 
 
-        
-            h3.rose{  color: #db5727; }
-			h3.cyan{ color: #a7eccd; }
-			h3.jaune{  color: #face50;  }
-			h3.vert{ color: #247962;  }
-			h3.bleu{  color: #3042b8; }
-			h3.orange{  color: #e0720b; }
-			
-		    div.rose{              border-top: 10px solid  #db5727; background-color : rgba(219, 87, 39,0.2);  }
-			div.cyan{              border-top: 10px solid #a7eccd;  background-color : rgba(167,236,205,0.2);}
-			div.jaune{              border-top: 10px solid #face50;  background-color :rgba(167,236,205,0.2);  }
-			div.vert{             border-top: 10px solid  #247962;  background-color : rgba(36,121,98,0.2);}
-			div.bleu{              border-top: 10px solid #3042b8; background-color :rgba(48, 66, 184,0.2); }
-			div.orange{             border-top: 10px solid #e0720b); background-color :  rgba(224,114,11,0.2);}
-			
-    </style>
-    
-    
-    
+
+    .creations {
+      background:
+        linear-gradient(217deg, rgb(255 0 0 / 0.8), rgb(255 0 0 / 0) 70.71%),
+        linear-gradient(127deg, rgb(0 128 0 / 1), rgb(0 128 0 / 0) 70.71%),
+        linear-gradient(336deg, rgb(255 165 0 / 1), rgb(255 165 0 / 0) 70.71%);
+      background-position: right bottom;
+    }
+
+    .creations h2 {
+      max-width: 800px;
+      margin: 0px auto;
+      margin-bottom: 50px;
+      color: var(--color-background-light);
+    }
+
+
+
+    /* carroussel */
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      height: 900px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      height: 100%;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .carousel-buttons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .carousel-buttons button {
+      background: transparent;
+      color: var(--color-background-dark);
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+
+
+    h3.rose {
+      color: #db5727;
+    }
+
+    h3.cyan {
+      color: #a7eccd;
+    }
+
+    h3.jaune {
+      color: #face50;
+    }
+
+    h3.vert {
+      color: #247962;
+    }
+
+    h3.bleu {
+      color: #3042b8;
+    }
+
+    h3.orange {
+      color: #e0720b;
+    }
+
+    div.rose {
+      border-top: 10px solid #db5727;
+      background-color: rgba(219, 87, 39, 0.2);
+    }
+
+    div.cyan {
+      border-top: 10px solid #a7eccd;
+      background-color: rgba(167, 236, 205, 0.2);
+    }
+
+    div.jaune {
+      border-top: 10px solid #face50;
+      background-color: rgba(167, 236, 205, 0.2);
+    }
+
+    div.vert {
+      border-top: 10px solid #247962;
+      background-color: rgba(36, 121, 98, 0.2);
+    }
+
+    div.bleu {
+      border-top: 10px solid #3042b8;
+      background-color: rgba(48, 66, 184, 0.2);
+    }
+
+    div.orange {
+      border-top: 10px solid #e0720b);
+      background-color: rgba(224, 114, 11, 0.2);
+    }
+  </style>
+
+
+
   <script>
-   
+
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
       nav.classList.toggle('scrolled', window.scrollY > 30);
     });
   </script>
 </head>
+
 <body>
 
   <nav id="navbar">
     <ul>
-      <li><a href="index.html"   class="active">Accueil</a></li>
+      <li><a href="index.html" class="active">Accueil</a></li>
       <li><a href="perrocle.html">Le Perroclé</a></li>
       <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Phil de fer</h1>
-            <p>Une touche d'artisanat unique pour votre intérieur. </p>
-            <p>Soutenez la création locale et l'upcycling.</p>
-                        <a href="contact.html" class="btn" target="_blank">Contactez-moi</a>
-        </div>
-      <img src="marc.jpg" alt="Phil de fer" class="hero-img">
-    
-    </header>
-    
-    
-    <section id="artisan" class="section artisan">
-            <p> Un magicien du fil de fer donne vie à des objets 2D et 3D. </p>
-            <p>Passionné par le travail du métal et l'art de la récupération, 
-               Phil de fer crée des sculptures uniques, alliant finesse et originalité. 
-               Chaque pièce est le fruit d'heures de travail méticuleux et d'une
-               imagination débordante.
-            </p>
-    </section>
-            
-    
-    
-      <section id="creations" class="section">
-        <h2>Quelques créations</h2>
-        <p>N'hésitez pas à aller jeter un coup d'oeil à la <a href="galerie.html" alt="galerie">Galerie</a> pour voir les différentes créations</p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Phil de fer</h1>
+      <p>Une touche d'artisanat unique pour votre intérieur. </p>
+      <p>Soutenez la création locale et l'upcycling.</p>
+      <a href="contact.html" class="btn" target="_blank">Contactez-moi</a>
+    </div>
+    <img src="marc.jpg" alt="Phil de fer" class="hero-img">
+
+  </header>
+
+
+  <section id="artisan" class="section artisan">
+    <p> Un magicien du fil de fer donne vie à des objets 2D et 3D. </p>
+    <p>Passionné par le travail du métal et l'art de la récupération,
+      Phil de fer crée des sculptures uniques, alliant finesse et originalité.
+      Chaque pièce est le fruit d'heures de travail méticuleux et d'une
+      imagination débordante.
+    </p>
+  </section>
+
+
+
+  <section id="creations" class="section">
+    <h2>Quelques créations</h2>
+    <p>N'hésitez pas à aller jeter un coup d'oeil à la <a href="galerie.html" alt="galerie">Galerie</a> pour voir les
+      différentes créations</p>
     <div class="carousel" id="carousel">
       <div class="carousel-track" id="carouselTrack">
         <img src="photos/20250306_165953.jpg" alt="Image 1">
@@ -201,38 +245,42 @@
     </div>
   </section>
 
-  
-    
-    
-    
-
-    <section id="eco-responsible" class="section eco-responsible boxed">
-		<h2>Une démarche éco-responsable</h2>
-
-		<p>Chaque sculpture est réalisée à partir de matériaux récupérés : fil de fer, métal usagé, chutes industrielles ou éléments glanés au fil des trouvailles.</p>
-		<p> Ce choix n’est pas un hasard : il s’inscrit dans une démarche d’upcycling, qui redonne vie à des matériaux destinés à l’oubli.</p>
-		<p>
-		Plutôt que de produire du neuf, je choisis de transformer l’existant, de sublimer l’imparfait.</p><p>
-		C’est cette philosophie qui rend chaque objet unique, chargé d’histoire, et eco-responsable.</p>
-		<p>
-			🌱 Offrir ou adopter un Perroclé, c’est soutenir :
-			<ul>
-				<li>une économie locale et artisanale,</li>
-				<li>une création durable, sans gaspillage,</li>
-				<li>une émotion unique, loin des objets standardisés.</li>
-			</ul>
-		</p>
-    </section>
 
 
-    <footer id="boutique" class="footer">
-        <h3>Venez découvrir toutes les créations !</h3>
-        <p>Retrouvez-nous à la boutique <strong><a href="https://g.co/kgs/rG1V6Qk" target="_blank">L'Effet Mèr(E)</a></strong></p>
-        <p><strong>Adresse :</strong> 4 Rue du Calvaire, 44420 Piriac-sur-Mer</p>
-        <p>&copy; 2025 Phil de fer. Tous droits réservés.</p>
-    </footer>
 
-<script>
+
+
+  <section id="eco-responsible" class="section eco-responsible boxed">
+    <h2>Une démarche éco-responsable</h2>
+
+    <p>Chaque sculpture est réalisée à partir de matériaux récupérés : fil de fer, métal usagé, chutes industrielles ou
+      éléments glanés au fil des trouvailles.</p>
+    <p> Ce choix n’est pas un hasard : il s’inscrit dans une démarche d’upcycling, qui redonne vie à des matériaux
+      destinés à l’oubli.</p>
+    <p>
+      Plutôt que de produire du neuf, je choisis de transformer l’existant, de sublimer l’imparfait.</p>
+    <p>
+      C’est cette philosophie qui rend chaque objet unique, chargé d’histoire, et eco-responsable.</p>
+    <p>
+      🌱 Offrir ou adopter un Perroclé, c’est soutenir :
+    <ul>
+      <li>une économie locale et artisanale,</li>
+      <li>une création durable, sans gaspillage,</li>
+      <li>une émotion unique, loin des objets standardisés.</li>
+    </ul>
+    </p>
+  </section>
+
+
+  <footer id="boutique" class="footer">
+    <h3>Venez découvrir toutes les créations !</h3>
+    <p>Retrouvez-nous à la boutique <strong><a href="https://g.co/kgs/rG1V6Qk" target="_blank">L'Effet
+          Mèr(E)</a></strong></p>
+    <p><strong>Adresse :</strong> 4 Rue du Calvaire, 44420 Piriac-sur-Mer</p>
+    <p>&copy; 2025 Phil de fer. Tous droits réservés.</p>
+  </footer>
+
+  <script>
     let currentIndex = 0;
     const track = document.getElementById('carouselTrack');
     const totalSlides = track.children.length;
@@ -255,8 +303,9 @@
     window.addEventListener('resize', updateCarousel);
     window.addEventListener('load', updateCarousel);
   </script>
-    
+
 
 
 </body>
+
 </html>

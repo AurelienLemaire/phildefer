@@ -1,261 +1,302 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phil de fer - Le Perroclé, un objet original et eco-responsable</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Importation des polices Google Fonts */
-        /* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap'); */ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phil de fer - Le Perroclé, un objet original et eco-responsable</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Importation des polices Google Fonts */
+    /* @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap'); */
 
-        /* Styles de base */
-
-
-        .hero {
-	   		background-image: url('beau-plumage-oiseau.jpg'); 
-		    background-size: cover;
-		    background-position: center;
-		}
-        
-
-        /* --- Section Pourquoi Adopter --- */
-        .why-buy {
-            background-color: var(--color-background-light);
-        }
-
-        .arguments-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .argument-card {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .argument-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-        
-        .argument-card h3 {
-            font-family: 'Quicksand', sans-serif;
-
-            font-size: 2.2em;
-            margin-bottom: 15px;
-        }
-
-        /* --- Section Éco-Responsable --- */
-        .eco-responsible {
-        }
-
-        .eco-responsible h2 {
-            max-width: 800px;
-            color: #247962;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-            margin: 0px auto;
-            margin-bottom: 50px;
-        }
-
-        .eco-responsible p {
-            max-width: 800px;
-            margin: 0px auto;
-            margin-bottom:15px;
-        }
-        
-
-        .creations {
-            max-width: 1200px;
-			background:
-			  linear-gradient(217deg, rgb(255 0 0 / 0.8), rgb(255 0 0 / 0) 70.71%),
-			  linear-gradient(127deg, rgb(0 128 0 / 1), rgb(0 128 0 / 0) 70.71%),
-			  linear-gradient(336deg, rgb(255 165 0 / 1), rgb(255 165 0 / 0) 70.71%);
-		  	background-position: right bottom;
-
-        }
-
-        .creations h2{
-            max-width: 800px;
-          	margin: 0px auto;
-            margin-bottom: 50px;
-            color:var(--color-background-light);
-        }
-        
-        .other-creations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 800px;
-            margin: 0px auto;
-        }
-
-        .other-creations-grid img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-		.other-creation{
-			text-align:center;
-			font-weight:bold;
-            font-size: 1.4em;
-		}
-
-        .other-creations-grid img:hover {
-            transform: scale(1.05);
-        }
-        
-        
-        
-        /* carroussel */
-		    
-		.carousel {
-		  position: relative;
-		  overflow: hidden;
-		  height: 600px;
-		  border-radius: 20px;
-		  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-		}
-
-		.carousel-track {
-		  display: flex;
-		  transition: transform 0.5s ease;
-		  height: 100%;
-		}
-
-		.carousel img {
-		  width: 100%;
-		  height: 100%;
-		  object-fit: cover;
-		  flex-shrink: 0;
-		}
-
-		.carousel-buttons {
-		  text-align: center;
-		  margin-top: 1rem;
-		}
-
-		.carousel-buttons button {
-		  background: transparent;
-		  color: var(--color-background-dark);
-		  border: none;
-		  padding: 0.5rem 1rem;
-		  margin: 0 0.5rem;
-		  border-radius: 5px;
-		  cursor: pointer;
-		}
-        
-        
+    /* Styles de base */
 
 
-        /* Media Queries pour la responsivité */
-        @media (max-width: 768px) {
- 
+    .hero {
+      background-image: url('beau-plumage-oiseau.jpg');
+      background-size: cover;
+      background-position: center;
+    }
 
-            .arguments-grid, .other-creations-grid {
-                grid-template-columns: 1fr;
-            }
 
-        }
+    /* --- Section Pourquoi Adopter --- */
+    .why-buy {
+      background-color: var(--color-background-light);
+    }
 
-        @media (max-width: 480px) {
-  
-            .argument-card {
-                padding: 20px;
-            }
+    .arguments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
 
-            .eco-responsible p {
-                font-size: 1em;
-            }
-        }
-        
-            h3.rose{  color: #db5727; }
-			h3.cyan{ color: #a7eccd; }
-			h3.jaune{  color: #face50;  }
-			h3.vert{ color: #247962;  }
-			h3.bleu{  color: #3042b8; }
-			h3.orange{  color: #e0720b; }
-			
-		    div.rose{              border-top: 10px solid  #db5727; background-color : rgba(219, 87, 39,0.2);  }
-			div.cyan{              border-top: 10px solid #a7eccd;  background-color : rgba(167,236,205,0.2);}
-			div.jaune{              border-top: 10px solid #face50;  background-color :rgba(167,236,205,0.2);  }
-			div.vert{             border-top: 10px solid  #247962;  background-color : rgba(36,121,98,0.2);}
-			div.bleu{              border-top: 10px solid #3042b8; background-color :rgba(48, 66, 184,0.2); }
-			div.orange{             border-top: 10px solid #e0720b); background-color :  rgba(224,114,11,0.2);}
-			
-			
-			
-    </style>
-    
-    
-    
+    .argument-card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .argument-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .argument-card h3 {
+      font-family: 'Quicksand', sans-serif;
+
+      font-size: 2.2em;
+      margin-bottom: 15px;
+    }
+
+    /* --- Section Éco-Responsable --- */
+    .eco-responsible {}
+
+    .eco-responsible h2 {
+      max-width: 800px;
+      color: #247962;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      margin: 0px auto;
+      margin-bottom: 50px;
+    }
+
+    .eco-responsible p {
+      max-width: 800px;
+      margin: 0px auto;
+      margin-bottom: 15px;
+    }
+
+
+    .creations {
+      max-width: 1200px;
+      background:
+        linear-gradient(217deg, rgb(255 0 0 / 0.8), rgb(255 0 0 / 0) 70.71%),
+        linear-gradient(127deg, rgb(0 128 0 / 1), rgb(0 128 0 / 0) 70.71%),
+        linear-gradient(336deg, rgb(255 165 0 / 1), rgb(255 165 0 / 0) 70.71%);
+      background-position: right bottom;
+
+    }
+
+    .creations h2 {
+      max-width: 800px;
+      margin: 0px auto;
+      margin-bottom: 50px;
+      color: var(--color-background-light);
+    }
+
+    .other-creations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 800px;
+      margin: 0px auto;
+    }
+
+    .other-creations-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .other-creation {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+
+    .other-creations-grid img:hover {
+      transform: scale(1.05);
+    }
+
+
+
+    /* carroussel */
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      height: 600px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      height: 100%;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .carousel-buttons {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .carousel-buttons button {
+      background: transparent;
+      color: var(--color-background-dark);
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+
+
+    /* Media Queries pour la responsivité */
+    @media (max-width: 768px) {
+
+
+      .arguments-grid,
+      .other-creations-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .argument-card {
+        padding: 20px;
+      }
+
+      .eco-responsible p {
+        font-size: 1em;
+      }
+    }
+
+    h3.rose {
+      color: #db5727;
+    }
+
+    h3.cyan {
+      color: #a7eccd;
+    }
+
+    h3.jaune {
+      color: #face50;
+    }
+
+    h3.vert {
+      color: #247962;
+    }
+
+    h3.bleu {
+      color: #3042b8;
+    }
+
+    h3.orange {
+      color: #e0720b;
+    }
+
+    div.rose {
+      border-top: 10px solid #db5727;
+      background-color: rgba(219, 87, 39, 0.2);
+    }
+
+    div.cyan {
+      border-top: 10px solid #a7eccd;
+      background-color: rgba(167, 236, 205, 0.2);
+    }
+
+    div.jaune {
+      border-top: 10px solid #face50;
+      background-color: rgba(167, 236, 205, 0.2);
+    }
+
+    div.vert {
+      border-top: 10px solid #247962;
+      background-color: rgba(36, 121, 98, 0.2);
+    }
+
+    div.bleu {
+      border-top: 10px solid #3042b8;
+      background-color: rgba(48, 66, 184, 0.2);
+    }
+
+    div.orange {
+      border-top: 10px solid #e0720b);
+      background-color: rgba(224, 114, 11, 0.2);
+    }
+  </style>
+
+
+
   <script>
-   
+
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
       nav.classList.toggle('scrolled', window.scrollY > 30);
     });
   </script>
 </head>
+
 <body>
 
   <nav id="navbar">
     <ul>
       <li><a href="index.html">Accueil</a></li>
-      <li><a href="perrocle.html"  class="active">Le Perroclé</a></li>
+      <li><a href="perrocle.html" class="active">Le Perroclé</a></li>
       <li><a href="galerie.html">Galerie</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Le Perroclé </h1>
-            <p>Une touche d'artisanat unique pour votre intérieur. </p>
-            <p>Soutenez la création locale et l'upcycling.</p>
-            <a href="contact.html" class="btn" target="_blank">J'en veux un</a>
-        </div>
-      <img src="perrocle_mockup4.png" alt="Perroclé" class="hero-img">
-    
-    </header>
-    
-    
-    
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Le Perroclé </h1>
+      <p>Une touche d'artisanat unique pour votre intérieur. </p>
+      <p>Soutenez la création locale et l'upcycling.</p>
+      <a href="contact.html" class="btn" target="_blank">J'en veux un</a>
+    </div>
+    <img src="perrocle_mockup4.png" alt="Perroclé" class="hero-img">
 
-    <section id="why-buy" class="section why-buy">
-        <h2>Adoptez un Perroclé ?</h2>
-        <div class="arguments-grid">
-            <div class="argument-card rose">
-                <h3 class="rose">Marre de votre vieille boîte à clés tristounette ?</h3>
-                <p>Le Perroclé apporte couleur et fantaisie à votre entrée ! </p>
-                <p>Il transforme un objet banal en une pièce pleine de vie.</p>
-            </div>
-            <div class="argument-card bleu">
-                <h3 class="bleu">En quête du cadeau original et éco-responsable ?</h3>
-                <p>Offrez un Perroclé ! </p>
-                <p>C'est une œuvre d'art utile, unique et qui soutient une démarche artisanale engagée. Un cadeau mémorable !</p>
-            </div>
-            <div class="argument-card vert">
-                <h3 class="vert">Envie de personnaliser votre entrée ?</h3>
-                <p>Chaque Perroclé est fait main, et porte en lui le savoir-faire et la passion de l'artiste.</p>
-                <p> Ajoutez une touche personnelle et distinctive à votre intérieur.</p>
-            </div>
+  </header>
 
-        </div>
-    </section>
-    
-    
-      <section class="section">
+
+
+
+  <section id="why-buy" class="section why-buy">
+    <h2>Adoptez un Perroclé ?</h2>
+    <div class="arguments-grid">
+      <div class="argument-card rose">
+        <h3 class="rose">Marre de votre vieille boîte à clés tristounette ?</h3>
+        <p>Le Perroclé apporte couleur et fantaisie à votre entrée ! </p>
+        <p>Il transforme un objet banal en une pièce pleine de vie.</p>
+      </div>
+      <div class="argument-card bleu">
+        <h3 class="bleu">En quête du cadeau original et éco-responsable ?</h3>
+        <p>Offrez un Perroclé ! </p>
+        <p>C'est une œuvre d'art utile, unique et qui soutient une démarche artisanale engagée. Un cadeau mémorable !
+        </p>
+      </div>
+      <div class="argument-card vert">
+        <h3 class="vert">Envie de personnaliser votre entrée ?</h3>
+        <p>Chaque Perroclé est fait main, et porte en lui le savoir-faire et la passion de l'artiste.</p>
+        <p> Ajoutez une touche personnelle et distinctive à votre intérieur.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section">
 
     <div class="carousel" id="carousel">
       <div class="carousel-track" id="carouselTrack">
@@ -294,34 +335,41 @@
     window.addEventListener('resize', updateCarousel);
     window.addEventListener('load', updateCarousel);
   </script>
-    
-    
-    
-    
 
-    <section id="eco-responsible" class="section eco-responsible">
-        <h2>Un objet éco-responsable</h2>
-        <p>Chaque Perroclé est une seconde vie donnée au métal ! </p><p>Je transforme des matériaux récupérés localement en œuvres d'art fonctionnelles.</p>
-        <p>C'est ça, l'<strong>upcycling</strong> : créer du beau avec ce qui existe déjà, pour une consommation plus juste et plus durable. </p>
-        <p>En choisissant un Perroclé, vous faites un geste pour la planète tout en acquérant une pièce unique.</p>
-    </section>
-    
-    
-     <section id="creations" class="section creations boxed">
-        <h2>Quelques autres créations</h2>
-        <div class="other-creations-grid">
-            <a class="other-creation" href="galerie.html?category=Poissons"><img src="photos/Pois20230511_075154.jpg" alt="Série Poisson">Série Poissons</a>
-            <a class="other-creation" href="galerie.html?category=Figurines"><img src="photos/BIGOUD-20240227_195549.jpg" alt="Série Figurines">Série Figurines</a>
-            <a class="other-creation" href="galerie.html?category=Animaux"><img src="photos/Ois20141126_112122.jpg" alt="Série Animaux">Série Animaux</a>
-        </div>
-    </section>
 
-    <footer id="boutique" class="footer">
-        <h3>Venez découvrir toutes les créations !</h3>
-        <p>Retrouvez-nous à la boutique <strong><a href="https://g.co/kgs/rG1V6Qk" target="_blank">L'Effet Mèr(E)</a></strong></p>
-        <p><strong>Adresse :</strong> 4 Rue du Calvaire, 44420 Piriac-sur-Mer</p>
-        <p>&copy; 2025 Phil de fer. Tous droits réservés.</p>
-    </footer>
+
+
+
+  <section id="eco-responsible" class="section eco-responsible">
+    <h2>Un objet éco-responsable</h2>
+    <p>Chaque Perroclé est une seconde vie donnée au métal ! </p>
+    <p>Je transforme des matériaux récupérés localement en œuvres d'art fonctionnelles.</p>
+    <p>C'est ça, l'<strong>upcycling</strong> : créer du beau avec ce qui existe déjà, pour une consommation plus juste
+      et plus durable. </p>
+    <p>En choisissant un Perroclé, vous faites un geste pour la planète tout en acquérant une pièce unique.</p>
+  </section>
+
+
+  <section id="creations" class="section creations boxed">
+    <h2>Quelques autres créations</h2>
+    <div class="other-creations-grid">
+      <a class="other-creation" href="galerie.html?category=Poissons"><img src="photos/Pois20230511_075154.jpg"
+          alt="Série Poisson">Série Poissons</a>
+      <a class="other-creation" href="galerie.html?category=Figurines"><img src="photos/BIGOUD-20240227_195549.jpg"
+          alt="Série Figurines">Série Figurines</a>
+      <a class="other-creation" href="galerie.html?category=Animaux"><img src="photos/Ois20141126_112122.jpg"
+          alt="Série Animaux">Série Animaux</a>
+    </div>
+  </section>
+
+  <footer id="boutique" class="footer">
+    <h3>Venez découvrir toutes les créations !</h3>
+    <p>Retrouvez-nous à la boutique <strong><a href="https://g.co/kgs/rG1V6Qk" target="_blank">L'Effet
+          Mèr(E)</a></strong></p>
+    <p><strong>Adresse :</strong> 4 Rue du Calvaire, 44420 Piriac-sur-Mer</p>
+    <p>&copy; 2025 Phil de fer. Tous droits réservés.</p>
+  </footer>
 
 </body>
+
 </html>
