@@ -196,7 +196,7 @@
         const card = document.createElement("div");
         card.className = "card";
         card.innerHTML = `
-          <img src="${item.image}" alt="${item.title}">
+          <img src="miniatures/${item.image}" alt="${item.title}">
           <div class="card-body">
             <p class="card-title">${item.title}</p>
             <p><strong>${item.category}</strong></p>
@@ -213,7 +213,7 @@
     function openLightbox(src) {
       const lb = document.getElementById("lightbox");
       const img = document.getElementById("lightbox-img");
-      img.src = src;
+      img.src = "photos/"+src;
       lb.classList.add("show");
     }
 
